@@ -1,4 +1,6 @@
-using Pkg, DataFrames, FixedEffectModels, CSV, RegressionTables, GLFixedEffectModels, GLM
+using Pkg
+Pkg.activate("/home/achapel/Desktop/homeworks/topics_trade_hw2/hw2_env")
+using DataFrames, FixedEffectModels, CSV, RegressionTables, GLFixedEffectModels, GLM
 
 df = CSV.read("Detroit.csv", DataFrame)
 df_nozeros = df[df.flows .!= 0, :]
